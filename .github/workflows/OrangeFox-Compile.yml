@@ -15,6 +15,7 @@ on:
         default: '12.1'
         type: choice
         options:
+        - 14.1
         - 12.1
         - 11.0
       DEVICE_TREE:
@@ -25,6 +26,11 @@ on:
         description: 'OrangeFox Device Tree Branch'
         required: true
         default: 'fox_12.1'
+        type: choice
+        options:
+          - fox_14.1
+          - fox_12.1
+
       DEVICE_PATH:
         description: 'Specify your Device Path'
         required: true
