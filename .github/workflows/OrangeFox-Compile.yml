@@ -21,7 +21,7 @@ on:
       DEVICE_TREE:
         description: 'OrangeFox Device Tree'
         required: true
-        default: 'https://github.com/One4Lots/device_xiaomi_miatoll.git'
+        default: 'https://github.com/One4Lots/orengefox_device_miatoll.git'
       DEVICE_TREE_BRANCH:
         description: 'OrangeFox Device Tree Branch'
         required: true
@@ -52,14 +52,14 @@ on:
 jobs:
   build:
     name: Build OFR by ${{ github.actor }}
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: write
     steps:
     - name: Checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
               
     - name: Clean-up
       uses: rokibhasansagar/slimhub_actions@v25.42.5
